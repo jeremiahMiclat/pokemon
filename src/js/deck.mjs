@@ -18,7 +18,7 @@ export function renderDeckContents() {
 
 function deckItemTemplate(item) {
     const newItem = `<li class="deck-card divider">
-    ${pokemon.name}
+    ${item.name}
   </li>`;
 
     return newItem;
