@@ -1,1 +1,0 @@
-import"./deck-66c2d315.js";import{b as m,c as a,a as p}from"./utils-0d7de4f6.js";function r(o){return`<p>${o.name}</p>`}async function c(o,n){const t=document.querySelector(o),e=await m(n);console.log(e),a(r,t,e)}const i=p("pokemon");c(".pokemon",i);
