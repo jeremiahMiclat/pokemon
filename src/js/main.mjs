@@ -3,8 +3,15 @@ import { renderListWithTemplate } from "./utils.mjs";
 
 
 function pokemonTypesTemplate(pokemonType) {
-    return `<ul><li><a href="pokemon-list/index.html?type=${pokemonType.name}">
-      ${pokemonType.name}</a></li></ul>`;
+    return `
+
+        <li class="card-item">
+          <a class="card-link" href="pokemon-list/index.html?type=${pokemonType.name}">
+            ${pokemonType.name}
+          </a>
+        </li>
+
+    `;
 }
 
 

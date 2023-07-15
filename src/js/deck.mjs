@@ -6,8 +6,8 @@ export function renderDeckContents() {
         const outputEl = document.querySelector(".deck-list");
         renderListWithTemplate(deckItemTemplate, outputEl, deckItems);
 
-        var deckTotalContainer = document.querySelector(".deck-footer");
-        deckTotalContainer.classList.remove("hide");
+        // var deckTotalContainer = document.querySelector(".deck-footer");
+        // deckTotalContainer.classList.remove("hide");
 
 
     } else {
