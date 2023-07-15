@@ -11,7 +11,8 @@ export default defineConfig({
                 main: resolve(__dirname, "src/index.html"),
                 "pokemon-list": resolve(__dirname, "src/pokemon-list/index.html"),
                 "pokemon-pages": resolve(__dirname, "src/pokemon-pages/index.html"),
-                deck: resolve(__dirname, "src/deck/index.html"),
+                team: resolve(__dirname, "src/team/index.html"),
+                configure: resolve(__dirname, "src/configure/index.html"),
                 // login: resolve(__dirname, "src/login/index.html")
             },
         },

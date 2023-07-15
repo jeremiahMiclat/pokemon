@@ -6,7 +6,7 @@ let pokemonInPage = {};
 function pokemonDetailTemplate(pokemon) {
     return `<p>${pokemon.name}</p>
     <div class="product-detail__add">
-    <button id="addToDeck" data-id="">Add to Deck</button>
+    <button id="addToTeam" data-id="">Add to Team</button>
   </div>`;
 }
 
@@ -31,39 +31,28 @@ export async function renderPokemonDetail(selector, pokemonName) {
 }
 
 export function eventListener() {
-    document.getElementById("addToDeck").addEventListener("click", addToDeck);
+    document.getElementById("addToTeam").addEventListener("click", addToTeam);
 }
 
 
 
-function addToDeck() {
-    // disable the btn
-    const deckBtn = document.getElementById("addToDeck");
-    deckBtn.disabled = true;
+function addToTeam() {
+    const teamBtn = document.getElementById("addToTeam");
+    teamBtn.disabled = true;
     setTimeout(() => {
-        const deck = getLocalStorage("pokemon-deck") || [];
-        const updatedDeck = [...deck, pokemonInPage];
-        setLocalStorage("pokemon-deck", updatedDeck);
+        const team = getLocalStorage("pokemon-team") || [];
+        const isDuplicate = team.some(pokemon => pokemon.name === pokemonInPage.name); // Check for duplicates
 
+        if (!isDuplicate) {
+            const updatedTeam = [...team, pokemonInPage];
+            setLocalStorage("pokemon-team", updatedTeam);
+        }
 
+        else {
+            alert("Already in your team");
+        }
 
-
-        // const backpackIcon = document.querySelector(".cart");
-        // backpackIcon.style.animation = "backpackAnimation 0.5s";
-
-
-        // const cartCountElement = document.querySelector(".item-count");
-        // cartCountElement.textContent = updatedCart.length;
-        // document.querySelector(".item-count").classList.remove("hide");
-
-        // setTimeout(() => {
-        //     backpackIcon.style.animation = "";
-        //     removeAllAlerts();
-        //     alertMessage(product.Name + "was added to cart")
-
-        //     cartBtn.disabled = false;
-        // }, 1000);
+        teamBtn.disabled = false;
     }, 2000);
-
 }
 
