@@ -13,17 +13,32 @@
     <main class="divider">
       <section class="pokemon"></section>
       <form id="pokemon-form">
-        <label for="pokemon-name">New Name:</label>
+        <label for="pokemon-name">Pokemon nickname:</label>
         <input type="text" id="pokemon-name" name="pokemon-name" required />
 
-        <label for="pokemon-abilities">New Abilities:</label>
-        <textarea
-          id="pokemon-abilities"
-          name="pokemon-abilities"
-          rows="4"
-        ></textarea>
+        <label for="nature">Nature:</label>
+        <input type="text" />
 
-        <button type="submit">Save Changes</button>
+        <label for="desired-stat">Desired Stat to train:</label>
+        <br />
+        <input type="checkbox" value="Attack" />
+        <label for="attack">Attack</label>
+
+        <input type="checkbox" value="Sp. Attack" />
+        <label for="sp-attack">Sp. Attack</label>
+
+        <input type="checkbox" value="Defense" />
+        <label for="defense">Defense</label>
+
+        <input type="checkbox" value="Sp. Defense" />
+        <label for="sp-defense">Sp. Defense</label>
+
+        <input type="checkbox" value="Speed" />
+        <label for="speed">Speed</label>
+
+        <br /><br />
+
+        <input type="submit" value="Submit" />
       </form>
     </main>
     <footer></footer>

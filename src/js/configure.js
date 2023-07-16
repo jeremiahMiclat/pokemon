@@ -1,8 +1,9 @@
 import { getParam, getLocalStorage, setLocalStorage } from "./utils.mjs";
 import { renderPokemonDetail } from "./configure.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
 
+loadHeaderFooter();
 const pokemon = getParam("name");
-console.log(pokemon);
 renderPokemonDetail(".pokemon", pokemon);
 
 

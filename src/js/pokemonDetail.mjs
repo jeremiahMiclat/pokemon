@@ -4,7 +4,10 @@ import { renderWithTemplate, getLocalStorage, setLocalStorage } from "./utils.mj
 let pokemonInPage = {};
 
 function pokemonDetailTemplate(pokemon) {
-    return `<p>${pokemon.name}</p>
+    return `<img
+    src="${pokemon.sprites.front_default}"
+    alt="Image of ${pokemon.name}" loading="lazy"
+  /><p>${pokemon.name}</p>
     <div class="product-detail__add">
     <button id="addToTeam" data-id="">Add to Team</button>
   </div>`;
@@ -46,6 +49,7 @@ function addToTeam() {
         if (!isDuplicate) {
             const updatedTeam = [...team, pokemonInPage];
             setLocalStorage("pokemon-team", updatedTeam);
+            alert("Added to your team successfully");
         }
 
         else {

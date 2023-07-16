@@ -3,7 +3,14 @@ import { renderWithTemplate, getLocalStorage, setLocalStorage } from "./utils.mj
 
 
 function pokemonDetailTemplate(pokemon) {
-    return `<p>${pokemon.name}</p>`;
+    console.log(pokemon)
+    return `<p>Pokemon Nickname: ${pokemon.name}</p>
+    <p>Pokemon Name: ${pokemon.pokemon.name}</p>
+    <img
+    src="${pokemon.sprites.front_default}"
+    alt="Image of ${pokemon.name}" loading="lazy"
+  />
+    `;
 }
 
 export function renderPokemonDetail(selector, param) {
