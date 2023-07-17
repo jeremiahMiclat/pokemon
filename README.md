@@ -10,3 +10,5 @@ This app addresses these challenges by providing a comprehensive planning tool, 
 
 
 Netlify link: https://comforting-frangollo-fca04d.netlify.app/pokemon-list/index.html?type=poison
+
+Note: This project is not completed yet...
